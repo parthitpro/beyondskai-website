@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curated Holiday Packages | Beyond Skai Travel</title>
+  <meta name="description" content="Explore handcrafted international & domestic holiday packages. Greece, Switzerland, Bali, Dubai, Singapore, and Thailand bespoke vacations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2026_luxury">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fly-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand fly-logo p-0 me-4" href="/">
+      <img src="/assets/images/beyondskai_transparent.png" alt="Beyond Skai Logo">
+    </a>
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about.php">About Us</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/packages.php">Curated Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="/flights.php">Flight Concierge</a></li>
+        <li class="nav-item"><a class="nav-link" href="/hotels.php">Luxury Stays</a></li>
+        <li class="nav-item"><a class="nav-link" href="/visa.php">Visa Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/forex.php">Forex Cards</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact.php">Contact</a></li>
+        <li class="nav-item ms-lg-3">
+          <a href="/contact.php" class="btn btn-primary rounded-pill px-4 fw-bold shadow-sm glow-btn">Plan Your Escape</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Header -->
+<div class="subpage-hero text-white">
+  <div class="container text-center">
+    <span class="badge hero-badge px-3 py-2 rounded-pill mb-2"><i class="fa-solid fa-gem me-1"></i> Signature Collections</span>
+    <h1 class="fw-bold display-5 mb-2">Curated Holiday Itineraries</h1>
+    <p class="lead mb-0 text-light">Immersive international escapes and bespoke private journeys crafted for memories that last forever</p>
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="row g-4">
+    
+    <!-- Package 1: Greece -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card package-card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative bg-white">
+        <div class="position-relative overflow-hidden" style="height: 240px;">
+          <img src="/assets/images/pkg_greece.jpg" alt="Aegean Splendor: Athens, Santorini &amp; Mykonos" class="w-100 h-100 object-fit-cover card-img-hover">
+          <span class="badge bg-dark bg-opacity-75 text-warning position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-medium fs-7">
+            <i class="fa-solid fa-clock me-1"></i> 8 Days / 7 Nights
+          </span>
+          <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-bold fs-7">
+            <i class="fa-solid fa-star text-warning me-1"></i> 4.9 <span class="text-muted fw-normal">(120+)</span>
+          </span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column justify-content-between">
+          <div>
+            <span class="text-uppercase text-primary fw-bold small tracking-wider mb-1 d-block"><i class="fa-solid fa-umbrella-beach me-1"></i> Mediterranean Classic</span>
+            <h5 class="fw-bold text-dark mb-2 line-clamp-1">Aegean Splendor: Athens, Santorini &amp; Mykonos</h5>
+            <p class="text-secondary small line-clamp-2 mb-3">Ancient Acropolis, private caldera catamaran sunset cruise, and boutique suites in Oia &amp; Mykonos.</p>
+          </div>
+          <div>
+            <hr class="my-3 border-secondary-subtle">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <span class="d-block small text-muted">Starting from</span>
+                <span class="fs-4 fw-extrabold text-success">₹1,53,000</span>
+              </div>
+              <a href="/package-details.php?id=10" class="btn btn-primary rounded-pill px-3 py-2 fw-semibold shadow-sm">
+                View Journey <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 2: Swiss Alps & Paris -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card package-card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative bg-white">
+        <div class="position-relative overflow-hidden" style="height: 240px;">
+          <img src="/assets/images/pkg_swiss.jpg" alt="Swiss Alps &amp; Paris" class="w-100 h-100 object-fit-cover card-img-hover">
+          <span class="badge bg-dark bg-opacity-75 text-warning position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-medium fs-7">
+            <i class="fa-solid fa-clock me-1"></i> 8 Days / 7 Nights
+          </span>
+          <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-bold fs-7">
+            <i class="fa-solid fa-star text-warning me-1"></i> 4.9 <span class="text-muted fw-normal">(95+)</span>
+          </span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column justify-content-between">
+          <div>
+            <span class="text-uppercase text-primary fw-bold small tracking-wider mb-1 d-block"><i class="fa-solid fa-snowflake me-1"></i> European Royalty</span>
+            <h5 class="fw-bold text-dark mb-2 line-clamp-1">Alpine Serenity: Swiss Alps &amp; Paris Romance</h5>
+            <p class="text-secondary small line-clamp-2 mb-3">Glacier 3000 panorama, luxury alpine chalets, private Seine river cruise, and Eiffel Tower dining.</p>
+          </div>
+          <div>
+            <hr class="my-3 border-secondary-subtle">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <span class="d-block small text-muted">Starting from</span>
+                <span class="fs-4 fw-extrabold text-success">₹1,25,000</span>
+              </div>
+              <a href="/package-details.php?id=3" class="btn btn-primary rounded-pill px-3 py-2 fw-semibold shadow-sm">
+                View Journey <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 3: Dubai Luxury -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card package-card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative bg-white">
+        <div class="position-relative overflow-hidden" style="height: 240px;">
+          <img src="/assets/images/pkg_dubai.jpg" alt="Dubai Luxury Tour" class="w-100 h-100 object-fit-cover card-img-hover">
+          <span class="badge bg-dark bg-opacity-75 text-warning position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-medium fs-7">
+            <i class="fa-solid fa-clock me-1"></i> 6 Days / 5 Nights
+          </span>
+          <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-bold fs-7">
+            <i class="fa-solid fa-star text-warning me-1"></i> 4.9 <span class="text-muted fw-normal">(140+)</span>
+          </span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column justify-content-between">
+          <div>
+            <span class="text-uppercase text-primary fw-bold small tracking-wider mb-1 d-block"><i class="fa-solid fa-city me-1"></i> Modern Glamour</span>
+            <h5 class="fw-bold text-dark mb-2 line-clamp-1">Emirates Luxe: Dubai Marina &amp; Desert Oasis</h5>
+            <p class="text-secondary small line-clamp-2 mb-3">Burj Khalifa VIP lounge, private dunes dinner under the stars, marina yacht cruise, and luxury shopping.</p>
+          </div>
+          <div>
+            <hr class="my-3 border-secondary-subtle">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <span class="d-block small text-muted">Starting from</span>
+                <span class="fs-4 fw-extrabold text-success">₹66,500</span>
+              </div>
+              <a href="/package-details.php?id=9" class="btn btn-primary rounded-pill px-3 py-2 fw-semibold shadow-sm">
+                View Journey <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 4: Bali Private Villa -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card package-card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative bg-white">
+        <div class="position-relative overflow-hidden" style="height: 240px;">
+          <img src="/assets/images/pkg_bali.jpg" alt="Bali Luxury Tour" class="w-100 h-100 object-fit-cover card-img-hover">
+          <span class="badge bg-dark bg-opacity-75 text-warning position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-medium fs-7">
+            <i class="fa-solid fa-clock me-1"></i> 6 Days / 5 Nights
+          </span>
+          <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-bold fs-7">
+            <i class="fa-solid fa-star text-warning me-1"></i> 4.9 <span class="text-muted fw-normal">(160+)</span>
+          </span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column justify-content-between">
+          <div>
+            <span class="text-uppercase text-primary fw-bold small tracking-wider mb-1 d-block"><i class="fa-solid fa-spa me-1"></i> Tropical Haven</span>
+            <h5 class="fw-bold text-dark mb-2 line-clamp-1">Island Elegance: Bali Private Pool Villas &amp; Nusa Penida</h5>
+            <p class="text-secondary small line-clamp-2 mb-3">Floating villa breakfasts, private candlelight beach dinners, Nusa Penida island speedboat tour, and Uluwatu cliffs.</p>
+          </div>
+          <div>
+            <hr class="my-3 border-secondary-subtle">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <span class="d-block small text-muted">Starting from</span>
+                <span class="fs-4 fw-extrabold text-success">₹48,500</span>
+              </div>
+              <a href="/package-details.php?id=8" class="btn btn-primary rounded-pill px-3 py-2 fw-semibold shadow-sm">
+                View Journey <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 5: Singapore Marina & Sentosa -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card package-card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative bg-white">
+        <div class="position-relative overflow-hidden" style="height: 240px;">
+          <img src="/assets/images/pkg_singapore.jpg" alt="Singapore Tour" class="w-100 h-100 object-fit-cover card-img-hover">
+          <span class="badge bg-dark bg-opacity-75 text-warning position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-medium fs-7">
+            <i class="fa-solid fa-clock me-1"></i> 5 Days / 4 Nights
+          </span>
+          <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-bold fs-7">
+            <i class="fa-solid fa-star text-warning me-1"></i> 4.9 <span class="text-muted fw-normal">(110+)</span>
+          </span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column justify-content-between">
+          <div>
+            <span class="text-uppercase text-primary fw-bold small tracking-wider mb-1 d-block"><i class="fa-solid fa-tree me-1"></i> Urban Sanctuary</span>
+            <h5 class="fw-bold text-dark mb-2 line-clamp-1">Garden City &amp; Sentosa: Singapore Luxury Getaway</h5>
+            <p class="text-secondary small line-clamp-2 mb-3">Gardens by the Bay Avatar experience, Universal Studios VIP access, night safari tram, and Marina Bay skyline dinner.</p>
+          </div>
+          <div>
+            <hr class="my-3 border-secondary-subtle">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <span class="d-block small text-muted">Starting from</span>
+                <span class="fs-4 fw-extrabold text-success">₹58,000</span>
+              </div>
+              <a href="/package-details.php?id=2" class="btn btn-primary rounded-pill px-3 py-2 fw-semibold shadow-sm">
+                View Journey <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Package 6: Thailand Escape -->
+    <div class="col-lg-4 col-md-6">
+      <div class="card package-card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative bg-white">
+        <div class="position-relative overflow-hidden" style="height: 240px;">
+          <img src="/assets/images/pkg_thailand.jpg" alt="Thailand Phuket &amp; Krabi" class="w-100 h-100 object-fit-cover card-img-hover">
+          <span class="badge bg-dark bg-opacity-75 text-warning position-absolute top-0 start-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-medium fs-7">
+            <i class="fa-solid fa-clock me-1"></i> 5 Days / 4 Nights
+          </span>
+          <span class="badge bg-white text-dark position-absolute top-0 end-0 m-3 px-3 py-2 rounded-pill shadow-sm fw-bold fs-7">
+            <i class="fa-solid fa-star text-warning me-1"></i> 4.9 <span class="text-muted fw-normal">(185+)</span>
+          </span>
+        </div>
+        <div class="card-body p-4 d-flex flex-column justify-content-between">
+          <div>
+            <span class="text-uppercase text-primary fw-bold small tracking-wider mb-1 d-block"><i class="fa-solid fa-water me-1"></i> Coastal Retreat</span>
+            <h5 class="fw-bold text-dark mb-2 line-clamp-1">Andaman Horizons: Thailand Phuket &amp; Krabi Escape</h5>
+            <p class="text-secondary small line-clamp-2 mb-3">Phi Phi Islands private speedboat tour, James Bond island sea caves, luxury cliffside resort stays, and sunset beach dining.</p>
+          </div>
+          <div>
+            <hr class="my-3 border-secondary-subtle">
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <span class="d-block small text-muted">Starting from</span>
+                <span class="fs-4 fw-extrabold text-success">₹35,999</span>
+              </div>
+              <a href="/package-details.php?id=1" class="btn btn-primary rounded-pill px-3 py-2 fw-semibold shadow-sm">
+                View Journey <i class="fa-solid fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-4 mt-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3 text-warning">Beyond Skai</h5>
+        <p class="text-secondary small">Your trusted travel advisors and bespoke holiday planners. Handcrafted packages, flight concierge, luxury resort reservations, visa assistance, and multi-currency forex cards.</p>
+        <div class="d-flex gap-3 fs-5 mt-3 text-secondary">
+          <a href="https://wa.me/919830541502?text=Hi%20Beyond%20Skai%20Team,%20I%20am%20interested%20in%20planning%20a%20holiday" class="btn btn-outline-success btn-sm rounded-pill px-3 text-white" target="_blank">
+            <i class="fa-brands fa-whatsapp me-1 text-success"></i> Chat with Travel Designers
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6">
+        <h6 class="fw-bold mb-3 text-white">Quick Links</h6>
+        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+          <li><a href="/" class="text-decoration-none text-secondary hover-white">Home</a></li>
+          <li><a href="/about.php" class="text-decoration-none text-secondary hover-white">About Us</a></li>
+          <li><a href="/packages.php" class="text-decoration-none text-secondary hover-white">Curated Packages</a></li>
+          <li><a href="/flights.php" class="text-decoration-none text-secondary hover-white">Flight Concierge</a></li>
+          <li><a href="/hotels.php" class="text-decoration-none text-secondary hover-white">Luxury Stays</a></li>
+          <li><a href="/visa.php" class="text-decoration-none text-secondary hover-white">Visa Services</a></li>
+          <li><a href="/forex.php" class="text-decoration-none text-secondary hover-white">Forex Cards</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold mb-3 text-white">Legal &amp; Policies</h6>
+        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+          <li><a href="/payment-policy.php" class="text-decoration-none text-secondary hover-white">Payment Policy</a></li>
+          <li><a href="/refund-policy.php" class="text-decoration-none text-secondary hover-white">Refund Policy</a></li>
+          <li><a href="/contact.php" class="text-decoration-none text-secondary hover-white">Customer Support</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold mb-3 text-white">Contact Info</h6>
+        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+          <li><i class="fa-solid fa-phone me-2 text-warning"></i> +91 9830541502</li>
+          <li><i class="fa-solid fa-envelope me-2 text-warning"></i> info@beyondskai.com</li>
+          <li><i class="fa-solid fa-location-dot me-2 text-warning"></i> 2C Mohendra Road, Kolkata</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-secondary small">
+      <p class="mb-0">&copy; 2026 Beyond Skai - Holiday Planners. All Rights Reserved.</p>
+      <p class="mb-0">Designed &amp; Managed with Care</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919830541502?text=Hi%20Beyond%20Skai%20Team,%20I%20am%20interested%20in%20planning%20a%20holiday" class="whatsapp-float shadow" target="_blank" title="Chat with Beyond Skai on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/main.js?v=2026_luxury"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Package Details - Beyond Skai</title>
+  <script>
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      let id = urlParams.get('id') || '10';
+      id = parseInt(id, 10);
+      if (isNaN(id) || id < 1 || id > 25) {
+        id = 10;
+      }
+      window.location.replace('package-details_id_' + id + '.html');
+    })();
+  </script>
+</head>
+<body style="font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #f8fafc;">
+  <div style="text-align: center;">
+    <h2>Loading Package Details...</h2>
+    <p>Please wait while we redirect you.</p>
+  </div>
+</body>
+</html>

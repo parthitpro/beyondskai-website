@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us - Beyond Skai | Curators of Bespoke Journeys &amp; Luxury Escapes</title>
+  <meta name="description" content="Learn about Beyond Skai, founded by Dinki Doshi. Tailor-made holiday planning, luxury packages, corporate retreats, and bespoke travel experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css?v=2026_luxury">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fly-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand fly-logo p-0 me-4" href="/">
+      <img src="/assets/images/beyondskai_transparent.png" alt="Beyond Skai Logo">
+    </a>
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/about.php">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="/packages.php">Curated Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="/flights.php">Flight Concierge</a></li>
+        <li class="nav-item"><a class="nav-link" href="/hotels.php">Luxury Stays</a></li>
+        <li class="nav-item"><a class="nav-link" href="/visa.php">Visa Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/forex.php">Forex Cards</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact.php">Contact</a></li>
+        <li class="nav-item ms-lg-3">
+          <a href="/contact.php" class="btn btn-primary rounded-pill px-4 fw-bold shadow-sm glow-btn">Plan Your Escape</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="subpage-hero text-white position-relative" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.82) 0%, rgba(30, 41, 59, 0.78) 100%), url('/assets/images/about_hero.jpg') center/cover no-repeat; padding: 5.5rem 0 6rem; border-radius: 0 0 2.5rem 2.5rem;">
+  <div class="container text-center position-relative" style="z-index: 2;">
+    <span class="badge hero-badge px-3 py-2 rounded-pill mb-3">
+      <i class="fa-solid fa-compass me-1"></i> Beyond Ordinary
+    </span>
+    <h1 class="fw-bold display-5 mb-2 text-white">About Beyond Skai</h1>
+    <p class="lead mb-0 text-light opacity-90">We don’t just take you places — we make every step of the journey unforgettable.</p>
+  </div>
+</div>
+
+<!-- Founder Story (Dinki Doshi) Section -->
+<section class="py-5 bg-white">
+  <div class="container py-4">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="text-primary fw-bold text-uppercase tracking-wider small">The Story of Beyond Skai</span>
+        <h2 class="fw-extrabold display-6 mt-1 mb-4">Travel Should Never Be Ordinary</h2>
+        <p class="text-secondary leading-relaxed fs-6 mb-3">
+          <strong>Beyond Skai</strong> was founded with a simple belief: <em>travel should never be ordinary</em>. Every journey deserves to be more than just a trip. Like the vast sea and boundless sky, we have limitless ideas to craft holidays that are as unique as every traveler.
+        </p>
+        <p class="text-secondary leading-relaxed fs-6 mb-4">
+          What sets us apart is our approach. We don’t believe in one-size-fits-all. Instead, we focus on making every detail different, meaningful, and deeply personal. Whether it’s curating bespoke itineraries, adding thoughtful touches, or creating experiences that go beyond the conventional, our goal is to ensure every traveler feels their journey was designed uniquely for them.
+        </p>
+        <div class="p-4 rounded-4 bg-light-subtle border-start border-4 border-primary shadow-sm">
+          <h5 class="fw-bold text-dark mb-1">Dinki Doshi</h5>
+          <span class="text-muted small text-uppercase tracking-wider fw-semibold">Founder, Beyond Skai</span>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="position-relative">
+          <div class="rounded-4 overflow-hidden shadow-lg border">
+            <img src="/assets/images/about_founder.jpg" alt="Dinki Doshi - Founder Beyond Skai" class="w-100 object-fit-cover" style="height: 440px;">
+          </div>
+          <div class="position-absolute bottom-0 end-0 bg-white p-3 rounded-4 shadow-lg m-3 border d-none d-sm-flex align-items-center gap-3">
+            <div class="p-3 bg-primary text-white rounded-circle fs-4">
+              <i class="fa-solid fa-plane-departure"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-0 text-dark">Skaier Moments</h6>
+              <span class="small text-muted">Skai is just the beginning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brand Philosophy & Kolkata Travel Lounge Showcase -->
+<section class="py-5 bg-light-subtle">
+  <div class="container py-4">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 order-lg-2">
+        <span class="text-primary fw-bold text-uppercase tracking-wider small">Brand Philosophy &amp; Experience</span>
+        <h2 class="fw-extrabold display-6 mt-1 mb-3">Our Kolkata Travel Lounge</h2>
+        <p class="text-secondary leading-relaxed fs-6 mb-3">
+          At Beyond Skai, holiday planning begins long before takeoff. We believe that true luxury lies in the art of listening. In our private travel lounge located at Mohendra Road, Kolkata, we invite our guests to sit down over freshly brewed coffee, discuss their aspirations, and map out bespoke journeys with our seasoned travel advisors.
+        </p>
+        <p class="text-secondary leading-relaxed fs-6 mb-4">
+          From curated private villa stays in Bali to high-altitude Swiss panoramas and seamless flight concierge, our bespoke philosophy ensures every detail is meticulously orchestrated with uncompromising standards.
+        </p>
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <div class="d-flex align-items-center p-3 bg-white rounded-4 border shadow-sm">
+              <div class="p-2 bg-primary-subtle text-primary rounded-3 me-3 fs-5">
+                <i class="fa-solid fa-mug-hot"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-dark">Private Consultations</h6>
+                <small class="text-muted">Personal 1-on-1 planning</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="d-flex align-items-center p-3 bg-white rounded-4 border shadow-sm">
+              <div class="p-2 bg-warning-subtle text-warning rounded-3 me-3 fs-5">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-0 text-dark">Kolkata Flagship</h6>
+                <small class="text-muted">2C Mohendra Road</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <div class="position-relative">
+          <div class="rounded-4 overflow-hidden shadow-lg border">
+            <img src="/assets/images/about_lounge.jpg" alt="Beyond Skai Travel Lounge Kolkata" class="w-100 object-fit-cover" style="height: 420px;">
+          </div>
+          <div class="position-absolute bottom-0 start-0 bg-white p-3 rounded-4 shadow-lg m-3 border d-none d-sm-flex align-items-center gap-3">
+            <div class="p-3 bg-warning text-dark rounded-circle fs-4">
+              <i class="fa-solid fa-couch"></i>
+            </div>
+            <div>
+              <h6 class="fw-bold mb-0 text-dark">Bespoke Experience Lounge</h6>
+              <span class="small text-muted">Warmth, elegance &amp; precision</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision & Mission -->
+<section class="py-5 bg-white">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <span class="text-primary fw-bold text-uppercase tracking-wider small">Our Core Purpose</span>
+      <h2 class="fw-extrabold display-6 mt-1 mb-2">Vision &amp; Mission</h2>
+      <p class="text-secondary lead fs-6 mb-0">Guiding every itinerary and personalized travel experience we design</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card p-4 p-lg-5 rounded-4 border-0 shadow-sm h-100 bg-light-subtle">
+          <div class="d-flex align-items-center mb-4">
+            <div class="p-3 bg-primary-subtle text-primary rounded-4 fs-3 me-3">
+              <i class="fa-solid fa-mountain-sun"></i>
+            </div>
+            <div>
+              <h3 class="fw-bold text-dark mb-0">Our Vision</h3>
+              <span class="text-muted small">Standing tall and timeless</span>
+            </div>
+          </div>
+          <p class="text-secondary fs-6 leading-relaxed mb-0">
+            To redefine travel by creating experiences that go beyond conventional journeys — where every detail is thoughtfully designed, every moment feels personal, and every journey leaves a lasting impact. Like the grandeur of the mountains, our vision stands tall and timeless.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card p-4 p-lg-5 rounded-4 border-0 shadow-sm h-100 bg-light-subtle">
+          <div class="d-flex align-items-center mb-4">
+            <div class="p-3 bg-warning-subtle text-warning rounded-4 fs-3 me-3">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <div>
+              <h3 class="fw-bold text-dark mb-0">Our Mission</h3>
+              <span class="text-muted small">Delivering excellence every day</span>
+            </div>
+          </div>
+          <ul class="list-unstyled text-secondary fs-6 d-flex flex-column gap-3 mb-0">
+            <li class="d-flex align-items-start">
+              <i class="fa-solid fa-circle-check text-primary mt-1 me-3"></i>
+              <span>To craft unique, tailor-made travel and event experiences that blend creativity, authenticity, and excellence.</span>
+            </li>
+            <li class="d-flex align-items-start">
+              <i class="fa-solid fa-circle-check text-primary mt-1 me-3"></i>
+              <span>To deliver personalized service, ensuring that no two journeys are ever the same.</span>
+            </li>
+            <li class="d-flex align-items-start">
+              <i class="fa-solid fa-circle-check text-primary mt-1 me-3"></i>
+              <span>To build lasting relationships with our clients, partners, and communities through trust, care, and shared experiences.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-5 bg-light-subtle">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <span class="text-primary fw-bold text-uppercase tracking-wider small">The Beyond Skai Difference</span>
+      <h2 class="fw-extrabold display-6 mt-1 mb-2">Why Travel With Us?</h2>
+      <p class="text-secondary lead fs-6 mb-0">Create memories that shine bright, like the sun</p>
+    </div>
+
+    <div class="row g-4 text-center">
+      <div class="col-lg-3 col-md-6">
+        <div class="p-4 bg-white rounded-4 shadow-sm h-100 border border-light-subtle transition-hover">
+          <div class="fs-1 text-primary mb-3"><i class="fa-solid fa-heart"></i></div>
+          <h5 class="fw-bold text-dark mb-2">For Every Traveler</h5>
+          <p class="text-secondary small mb-0">From romantic honeymoons and family getaways to corporate groups and friends travel, we curate it all.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="p-4 bg-white rounded-4 shadow-sm h-100 border border-light-subtle transition-hover">
+          <div class="fs-1 text-warning mb-3"><i class="fa-solid fa-handshake"></i></div>
+          <h5 class="fw-bold text-dark mb-2">Trusted Global Network</h5>
+          <p class="text-secondary small mb-0">Strong direct partnerships with luxury hotels, verified airlines, and on-ground organizers ensure seamless execution.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="p-4 bg-white rounded-4 shadow-sm h-100 border border-light-subtle transition-hover">
+          <div class="fs-1 text-success mb-3"><i class="fa-solid fa-shield-halved"></i></div>
+          <h5 class="fw-bold text-dark mb-2">End-to-End Support</h5>
+          <p class="text-secondary small mb-0">From initial planning to 24/7 on-ground assistance, we handle everything so you can simply enjoy the experience.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="p-4 bg-white rounded-4 shadow-sm h-100 border border-light-subtle transition-hover">
+          <div class="fs-1 text-info mb-3"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h5 class="fw-bold text-dark mb-2">Bespoke Customization</h5>
+          <p class="text-secondary small mb-0">Every single journey is thoughtfully curated with personalized touches and unexpected pleasant surprises.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How to Book 4 Steps -->
+<section class="py-5 bg-white">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <span class="text-primary fw-bold text-uppercase tracking-wider small">Easy 4-Step Process</span>
+      <h2 class="fw-extrabold display-6 mt-1 mb-2">How To Book Your Journey</h2>
+      <p class="text-secondary lead fs-6 mb-0">Stress-free booking for solo trips, family vacations, or corporate retreats</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-4 rounded-4 border-0 shadow-sm h-100 bg-light-subtle text-center">
+          <div class="rounded-circle bg-primary text-white fs-4 fw-bold mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 55px; height: 55px;">1</div>
+          <h5 class="fw-bold text-dark mb-2">Select Destination</h5>
+          <p class="text-secondary small mb-0">Explore our curated international &amp; domestic destinations or share your dream spot.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-4 rounded-4 border-0 shadow-sm h-100 bg-light-subtle text-center">
+          <div class="rounded-circle bg-warning text-dark fs-4 fw-bold mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 55px; height: 55px;">2</div>
+          <h5 class="fw-bold text-dark mb-2">Connect &amp; Personalize</h5>
+          <p class="text-secondary small mb-0">Connect directly with our travel planners to customize your itinerary and preferences.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-4 rounded-4 border-0 shadow-sm h-100 bg-light-subtle text-center">
+          <div class="rounded-circle bg-success text-white fs-4 fw-bold mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 55px; height: 55px;">3</div>
+          <h5 class="fw-bold text-dark mb-2">Itinerary &amp; Easy Booking</h5>
+          <p class="text-secondary small mb-0">Receive a comprehensive day-by-day itinerary and secure your booking with flexible payment options.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-4 rounded-4 border-0 shadow-sm h-100 bg-light-subtle text-center">
+          <div class="rounded-circle bg-info text-white fs-4 fw-bold mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 55px; height: 55px;">4</div>
+          <h5 class="fw-bold text-dark mb-2">Get Ready to Fly!</h5>
+          <p class="text-secondary small mb-0">Sit back and relax — we'll send all confirmations, tickets, and vouchers for a stress-free holiday.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skaier Moments Gallery Banner -->
+<section class="py-5 bg-light-subtle">
+  <div class="container py-4 text-center">
+    <span class="text-primary fw-bold text-uppercase tracking-wider small">Memories That Last Forever</span>
+    <h2 class="fw-extrabold display-6 mt-1 mb-3">Skaier Moments, Beyond Ordinary</h2>
+    <p class="text-secondary lead fs-6 mb-5">With Beyond Skai, Skai is just the beginning</p>
+
+    <div class="row g-4">
+      <div class="col-lg-3 col-sm-6">
+        <div class="rounded-4 overflow-hidden shadow-sm position-relative" style="height: 250px;">
+          <img src="/assets/images/greece.jpg" alt="Skaier Moment Greece" class="w-100 h-100 object-fit-cover card-img-hover">
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="rounded-4 overflow-hidden shadow-sm position-relative" style="height: 250px;">
+          <img src="/assets/images/dubai.jpg" alt="Skaier Moment Dubai" class="w-100 h-100 object-fit-cover card-img-hover">
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="rounded-4 overflow-hidden shadow-sm position-relative" style="height: 250px;">
+          <img src="/assets/images/singapore.jpg" alt="Skaier Moment Singapore" class="w-100 h-100 object-fit-cover card-img-hover">
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="rounded-4 overflow-hidden shadow-sm position-relative" style="height: 250px;">
+          <img src="/assets/images/bali.jpg" alt="Skaier Moment Bali" class="w-100 h-100 object-fit-cover card-img-hover">
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <a href="https://wa.me/919830541502?text=Hi%20Beyond%20Skai%20Team,%20I%20am%20interested%20in%20planning%20a%20holiday" class="btn btn-warning btn-lg rounded-pill px-5 fw-bold shadow glow-btn" target="_blank">
+        <i class="fa-brands fa-whatsapp me-2"></i> Plan Your Holiday With Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-4 mt-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3 text-warning">Beyond Skai</h5>
+        <p class="text-secondary small">Your trusted travel partner and holiday planners. Tailor-made packages, flight bookings, luxury hotels, visa assistance, and foreign exchange worldwide.</p>
+        <div class="d-flex gap-3 fs-5 mt-3 text-secondary">
+          <a href="https://wa.me/919830541502?text=Hi%20Beyond%20Skai%20Team,%20I%20am%20interested%20in%20your%20Holiday%20and%20Travel%20services" class="btn btn-outline-success btn-sm rounded-pill px-3 text-white" target="_blank">
+            <i class="fa-brands fa-whatsapp me-1 text-success"></i> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6">
+        <h6 class="fw-bold mb-3 text-white">Quick Links</h6>
+        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+          <li><a href="/" class="text-decoration-none text-secondary hover-white">Home</a></li>
+          <li><a href="/about.php" class="text-decoration-none text-secondary hover-white">About Us</a></li>
+          <li><a href="/packages.php" class="text-decoration-none text-secondary hover-white">Packages</a></li>
+          <li><a href="/flights.php" class="text-decoration-none text-secondary hover-white">Flights</a></li>
+          <li><a href="/hotels.php" class="text-decoration-none text-secondary hover-white">Hotels</a></li>
+          <li><a href="/visa.php" class="text-decoration-none text-secondary hover-white">Visa</a></li>
+          <li><a href="/forex.php" class="text-decoration-none text-secondary hover-white">Forex</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold mb-3 text-white">Legal &amp; Policies</h6>
+        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+          <li><a href="/payment-policy.php" class="text-decoration-none text-secondary hover-white">Payment Policy</a></li>
+          <li><a href="/refund-policy.php" class="text-decoration-none text-secondary hover-white">Refund Policy</a></li>
+          <li><a href="/contact.php" class="text-decoration-none text-secondary hover-white">Support</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold mb-3 text-white">Contact Info</h6>
+        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+          <li><i class="fa-solid fa-phone me-2 text-warning"></i> +91 9830541502</li>
+          <li><i class="fa-solid fa-envelope me-2 text-warning"></i> info@beyondskai.com</li>
+          <li><i class="fa-solid fa-location-dot me-2 text-warning"></i> 2C Mohendra Road, Kolkata</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-secondary small">
+      <p class="mb-0">&copy; 2026 Beyond Skai - Holiday Planners. All Rights Reserved.</p>
+      <p class="mb-0">Designed &amp; Managed with Care</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919830541502?text=Hi%20Beyond%20Skai%20Team,%20I%20am%20interested%20in%20your%20Holiday%20and%20Travel%20services" class="whatsapp-float shadow" target="_blank" title="Chat with Beyond Skai on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/main.js?v=2026"></script>
+</body>
+</html>

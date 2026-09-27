@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Beyond Skai - Holiday Planners & Travel Advisors</title>
+
+
+
+<meta name="description" content="Book Flights, Hotels, Holiday Packages, Visa Assistance, Forex and much more with complete peace of mind.">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+<link rel="stylesheet" href="/assets/css/style.css?v=2026_luxury">
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+<nav class="navbar navbar-expand-lg fly-navbar sticky-top">
+
+<div class="container">
+
+
+
+<a class="navbar-brand fly-logo p-0 me-4" href="/">
+
+  <img src="/assets/images/beyondskai_transparent.png" alt="Beyond Skai Logo" style="height: 65px; width: auto; object-fit: contain;">
+
+</a>
+
+
+
+<button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+
+
+<div class="collapse navbar-collapse" id="navbar">
+
+
+
+<ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+
+<li class="nav-item">
+
+<a class="nav-link " href="/">Home</a>
+
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/about.php">About Us</a>
+</li>
+
+
+
+<li class="nav-item">
+
+<a class="nav-link " href="/packages.php">Packages</a>
+
+</li>
+
+
+
+<li class="nav-item">
+
+<a class="nav-link " href="/flights.php">Flights</a>
+
+</li>
+
+
+
+<li class="nav-item">
+
+<a class="nav-link " href="/hotels.php">Hotels</a>
+
+</li>
+
+
+
+<li class="nav-item">
+
+<a class="nav-link " href="/visa.php">Visa</a>
+
+</li>
+
+
+
+<li class="nav-item">
+
+<a class="nav-link " href="/forex.php">Forex</a>
+
+</li>
+
+
+
+<li class="nav-item">
+
+<a class="nav-link " href="/contact.php">Contact</a>
+
+</li>
+
+
+
+<li class="nav-item ms-lg-3">
+
+<a href="/contact.php" class="btn btn-warning rounded-pill px-4 fw-bold shadow-sm glow-btn">Plan Your Trip</a>
+
+</li>
+
+
+
+</ul>
+
+
+
+</div>
+
+
+
+</div>
+
+</nav>
+
+
+<div class="subpage-hero text-white">
+  <div class="container text-center">
+    <h1 class="fw-bold display-5 mb-2"><i class="fa-solid fa-shield-heart me-2"></i> Payment Policy</h1>
+    <p class="lead mb-0 text-light">Transparent & secure payment terms for all travel bookings</p>
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="card p-4 p-md-5 rounded-4 shadow-sm border-0 bg-white">
+    <h3 class="fw-bold text-primary mb-3">Booking & Payment Terms</h3>
+    <p class="text-secondary leading-relaxed fs-6">At Beyond Skai, we aim to make your booking process transparent, convenient, and 100% secure.</p>
+    <ul class="text-secondary leading-relaxed fs-6 d-flex flex-column gap-2 mt-3">
+      <li><i class="fa-solid fa-check text-success me-2"></i> All holiday package bookings require an advance deposit upon itinerary confirmation.</li>
+      <li><i class="fa-solid fa-check text-success me-2"></i> Full flight and visa charges must be cleared prior to ticket issuance or visa submission.</li>
+      <li><i class="fa-solid fa-check text-success me-2"></i> We accept UPI, Net Banking, Credit/Debit cards, and Bank Transfers.</li>
+      <li><i class="fa-solid fa-check text-success me-2"></i> Payment receipts and invoices are issued immediately upon payment confirmation.</li>
+    </ul>
+  </div>
+</div>
+
+<footer class="bg-dark text-white pt-5 pb-4 mt-5">
+
+  <div class="container">
+
+    <div class="row g-4">
+
+      <div class="col-lg-4 col-md-6">
+
+        <h5 class="fw-bold mb-3 text-warning">Beyond Skai</h5>
+
+        <p class="text-secondary small">Your trusted travel partner for holiday packages, flight bookings, luxury hotels, visa assistance, and foreign exchange worldwide.</p>
+
+        <div class="d-flex gap-3 fs-5 mt-3 text-secondary">
+
+          <a href="https://wa.me/919830541502?text=Hi%20Beyond Skai Team,%20I%20am%20interested%20in%20Beyond Skai%20Travel%20services" class="btn btn-outline-success btn-sm rounded-pill px-3 text-white" target="_blank">
+
+            <i class="fa-brands fa-whatsapp me-1 text-success"></i> Chat on WhatsApp
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="col-lg-2 col-md-6">
+
+        <h6 class="fw-bold mb-3 text-white">Quick Links</h6>
+
+        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+
+          <li><a href="/" class="text-decoration-none text-secondary hover-white">Home</a></li>
+<li><a href="/about.php" class="text-decoration-none text-secondary hover-white">About Us</a></li>
+
+          <li><a href="/packages.php" class="text-decoration-none text-secondary hover-white">Packages</a></li>
+
+          <li><a href="/flights.php" class="text-decoration-none text-secondary hover-white">Flights</a></li>
+
+          <li><a href="/hotels.php" class="text-decoration-none text-secondary hover-white">Hotels</a></li>
+
+          <li><a href="/visa.php" class="text-decoration-none text-secondary hover-white">Visa</a></li>
+
+          <li><a href="/forex.php" class="text-decoration-none text-secondary hover-white">Forex</a></li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="col-lg-3 col-md-6">
+
+        <h6 class="fw-bold mb-3 text-white">Legal & Policies</h6>
+
+        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+
+          <li><a href="/payment-policy.php" class="text-decoration-none text-secondary hover-white">Payment Policy</a></li>
+
+          <li><a href="/refund-policy.php" class="text-decoration-none text-secondary hover-white">Refund Policy</a></li>
+
+          <li><a href="/contact.php" class="text-decoration-none text-secondary hover-white">Support</a></li>
+
+        </ul>
+
+      </div>
+
+
+
+      <div class="col-lg-3 col-md-6">
+
+        <h6 class="fw-bold mb-3 text-white">Contact Info</h6>
+
+        <ul class="list-unstyled text-secondary small d-flex flex-column gap-2">
+
+          <li><i class="fa-solid fa-phone me-2 text-warning"></i> +91 9830541502</li>
+
+          <li><i class="fa-solid fa-envelope me-2 text-warning"></i> sales@beyondskai.com</li>
+
+          <li><i class="fa-solid fa-location-dot me-2 text-warning"></i> 2C Mohendra Road, Kolkata</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+
+    <hr class="border-secondary my-4">
+
+
+
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between text-secondary small">
+
+      <p class="mb-0">&copy; 2026 Beyond Skai - Holiday Planners. All Rights Reserved.</p>
+
+      <p class="mb-0">Designed & Managed with Care</p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<!-- WhatsApp Floating Button -->
+
+<a href="https://wa.me/919830541502?text=Hi%20Beyond Skai Team,%20I%20am%20interested%20in%20Beyond Skai%20Travel%20services" class="whatsapp-float shadow" target="_blank" title="Chat with Beyond Skai Team on WhatsApp">
+
+  <i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- Success Modal Popup -->
+
+<div class="modal fade" id="enquirySuccessModal" tabindex="-1" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered">
+
+    <div class="modal-content border-0 shadow-lg rounded-4 text-center p-4 bg-white text-dark">
+
+      <div class="modal-body">
+
+        <div class="display-1 text-success mb-3">
+
+          <i class="fa-solid fa-circle-check"></i>
+
+        </div>
+
+        <h3 class="fw-bold text-dark mb-2">Request Received!</h3>
+
+        <p class="text-secondary mb-4 fs-6">Thank you for choosing Beyond Skai. Our travel expert team will contact you shortly to assist with your booking.</p>
+
+        <button type="button" class="btn btn-primary rounded-pill px-5 fw-bold glow-btn" data-bs-dismiss="modal">OK, Got It!</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="/assets/js/main.js?v=1790125193"></script>
+
+
+
+</body>
+
+</html>
+

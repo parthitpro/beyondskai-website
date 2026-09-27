@@ -1,0 +1,14 @@
+# Logs and system
+*.log
+.system_generated/
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archives & Temporary
+*.zip
+enquiries_log.json

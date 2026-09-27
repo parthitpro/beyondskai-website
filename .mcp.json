@@ -1,0 +1,43 @@
+{
+  "mcpServers": {
+    "godaddy": {
+      "type": "sse",
+      "url": "https://api.godaddy.com/v1/domains/mcp"
+    },
+    "hostinger-hosting": {
+      "command": "npx.cmd",
+      "args": ["--package=@hostinger/mcp@latest", "hostinger-hosting-mcp"],
+      "env": {
+        "HOSTINGER_API_TOKEN": "YOUR_HOSTINGER_API_TOKEN"
+      }
+    },
+    "hostinger-domains": {
+      "command": "npx.cmd",
+      "args": ["--package=@hostinger/mcp@latest", "hostinger-domains-mcp"],
+      "env": {
+        "HOSTINGER_API_TOKEN": "YOUR_HOSTINGER_API_TOKEN"
+      }
+    },
+    "hostinger-dns": {
+      "command": "npx.cmd",
+      "args": ["--package=@hostinger/mcp@latest", "hostinger-dns-mcp"],
+      "env": {
+        "HOSTINGER_API_TOKEN": "YOUR_HOSTINGER_API_TOKEN"
+      }
+    },
+    "hostinger-billing": {
+      "command": "npx.cmd",
+      "args": ["--package=@hostinger/mcp@latest", "hostinger-billing-mcp"],
+      "env": {
+        "HOSTINGER_API_TOKEN": "YOUR_HOSTINGER_API_TOKEN"
+      }
+    },
+    "hostinger-reach": {
+      "command": "npx.cmd",
+      "args": ["--package=@hostinger/mcp@latest", "hostinger-reach-mcp"],
+      "env": {
+        "HOSTINGER_API_TOKEN": "YOUR_HOSTINGER_API_TOKEN"
+      }
+    }
+  }
+}
