@@ -101,7 +101,9 @@
   <!-- Lockscreen Overlay -->
   <div id="authOverlay">
     <div class="login-box text-center text-white">
-      <img src="assets/images/beyondskai_transparent.png" alt="Beyond Skai" style="height: 52px; filter: brightness(0) invert(1);" class="mb-4">
+      <div class="bg-white px-4 py-2.5 rounded-4 d-inline-block mb-3 shadow-sm">
+        <img src="assets/images/beyondskai_transparent.png" alt="Beyond Skai Logo" style="height: 50px; width: auto; object-fit: contain;">
+      </div>
       <h4 class="fw-bold mb-1">Executive Portal</h4>
       <p class="text-secondary small mb-4">Enter your Beyond Skai Admin Passcode to view live client enquiries</p>
       <form id="authForm">
@@ -126,20 +128,20 @@
   </div>
 
   <!-- Admin Navbar -->
-  <nav class="navbar navbar-dark admin-navbar py-3 sticky-top">
+  <nav class="navbar py-2 sticky-top" style="background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); border-bottom: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);">
     <div class="container-fluid px-lg-4">
       <a class="navbar-brand d-flex align-items-center gap-3 m-0" href="index.html">
-        <img src="assets/images/beyondskai_transparent.png" alt="Beyond Skai" style="height: 38px; filter: brightness(0) invert(1);">
-        <span class="badge bg-warning text-dark fw-bold px-2 py-1 small rounded-pill">Admin Leads Portal</span>
+        <img src="assets/images/beyondskai_transparent.png" alt="Beyond Skai Logo" style="height: 54px; width: auto; object-fit: contain;">
+        <span class="badge bg-warning text-dark fw-bold px-3 py-1.5 small rounded-pill">Admin Leads Portal</span>
       </a>
       <div class="d-flex align-items-center gap-2">
-        <a href="index.html" class="btn btn-sm btn-outline-light rounded-pill px-3" target="_blank">
+        <a href="index.html" class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-semibold" target="_blank">
           <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> View Website
         </a>
-        <button class="btn btn-sm btn-outline-warning rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#settingsModal">
+        <button class="btn btn-sm btn-outline-primary rounded-pill px-3 fw-semibold" data-bs-toggle="modal" data-bs-target="#settingsModal">
           <i class="fa-solid fa-gear me-1"></i> Settings &amp; Sync
         </button>
-        <button class="btn btn-sm btn-danger rounded-pill px-3" id="logoutBtn">
+        <button class="btn btn-sm btn-outline-danger rounded-pill px-3 fw-semibold" id="logoutBtn">
           <i class="fa-solid fa-power-off me-1"></i> Lock
         </button>
       </div>
