@@ -99,8 +99,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('localStorage lead save notice:', err);
       }
 
-      // 2. Transmit to Google Sheet Webhook if configured
-      const sheetUrl = localStorage.getItem('beyondskai_sheet_url');
+      // 2. Transmit to Google Sheet Webhook
+      const defaultSheetUrl = 'https://script.google.com/macros/s/AKfycbxJpQgmZF6ukz-NDNXzgnN76KcPOhfXjtYpBLzx1SkY4_LkiFSRmcl2y0D1X4qXfFXCVA/exec';
+      const sheetUrl = localStorage.getItem('beyondskai_sheet_url') || defaultSheetUrl;
       if (sheetUrl) {
         try {
           await fetch(sheetUrl, {

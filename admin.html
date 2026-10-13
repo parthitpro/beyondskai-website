@@ -350,6 +350,7 @@
     const LEADS_KEY = 'beyondskai_leads';
     const SHEET_URL_KEY = 'beyondskai_sheet_url';
     const DEFAULT_PIN = 'skai2026';
+    const DEFAULT_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxJpQgmZF6ukz-NDNXzgnN76KcPOhfXjtYpBLzx1SkY4_LkiFSRmcl2y0D1X4qXfFXCVA/exec';
 
     // State
     let leads = [];
@@ -406,7 +407,7 @@
 
     // Sync from Google Sheet (if configured)
     async function fetchGoogleSheetLeads() {
-      const sheetUrl = localStorage.getItem(SHEET_URL_KEY);
+      const sheetUrl = localStorage.getItem(SHEET_URL_KEY) || DEFAULT_SHEET_URL;
       const badge = document.getElementById('syncStatusBadge');
 
       if (!sheetUrl) {
