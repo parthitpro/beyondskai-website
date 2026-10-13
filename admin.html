@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Portal - Beyond Skai | Lead &amp; Enquiry Management</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    :root {
+      --bg-dark: #090e17;
+      --card-dark: #111827;
+      --border-dark: #1f2937;
+      --accent-gold: #f59e0b;
+      --accent-blue: #0284c7;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      min-height: 100vh;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+    .admin-navbar {
+      background: #0f172a;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .admin-card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .admin-card:hover {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+    }
+    .stat-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+    }
+    .badge-service {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.35rem 0.65rem;
+      border-radius: 20px;
+    }
+    .table > :not(caption) > * > * {
+      padding: 1rem 0.85rem;
+      vertical-align: middle;
+    }
+    .btn-whatsapp {
+      background-color: #25D366;
+      color: #ffffff;
+      font-weight: 600;
+      border: none;
+      transition: all 0.2s;
+    }
+    .btn-whatsapp:hover {
+      background-color: #1eb956;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+    /* Auth Modal Screen */
+    #authOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(135deg, #090e17 0%, #0f172a 100%);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-box {
+      width: 100%;
+      max-width: 420px;
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lockscreen Overlay -->
+  <div id="authOverlay">
+    <div class="login-box text-center text-white">
+      <img src="assets/images/beyondskai_transparent.png" alt="Beyond Skai" style="height: 52px; filter: brightness(0) invert(1);" class="mb-4">
+      <h4 class="fw-bold mb-1">Executive Portal</h4>
+      <p class="text-secondary small mb-4">Enter your Beyond Skai Admin Passcode to view live client enquiries</p>
+      <form id="authForm">
+        <div class="mb-3 text-start">
+          <label class="form-label small text-light opacity-75">Admin PIN / Passcode</label>
+          <div class="input-group">
+            <span class="input-group-text bg-dark border-secondary text-secondary"><i class="fa-solid fa-lock"></i></span>
+            <input type="password" id="adminPinInput" class="form-control bg-dark border-secondary text-white" placeholder="Enter PIN (Default: skai2026)" required autofocus>
+          </div>
+          <div id="authError" class="text-danger small mt-2 d-none">
+            <i class="fa-solid fa-circle-exclamation me-1"></i> Incorrect Passcode. Try <code>skai2026</code>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-warning w-100 rounded-pill fw-bold py-2 mt-2">
+          <i class="fa-solid fa-key me-2"></i> Unlock Dashboard
+        </button>
+      </form>
+      <div class="mt-4 pt-3 border-top border-secondary border-opacity-25 text-muted small">
+        Default Passcode: <span class="badge bg-secondary">skai2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Navbar -->
+  <nav class="navbar navbar-dark admin-navbar py-3 sticky-top">
+    <div class="container-fluid px-lg-4">
+      <a class="navbar-brand d-flex align-items-center gap-3 m-0" href="index.html">
+        <img src="assets/images/beyondskai_transparent.png" alt="Beyond Skai" style="height: 38px; filter: brightness(0) invert(1);">
+        <span class="badge bg-warning text-dark fw-bold px-2 py-1 small rounded-pill">Admin Leads Portal</span>
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <a href="index.html" class="btn btn-sm btn-outline-light rounded-pill px-3" target="_blank">
+          <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> View Website
+        </a>
+        <button class="btn btn-sm btn-outline-warning rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#settingsModal">
+          <i class="fa-solid fa-gear me-1"></i> Settings &amp; Sync
+        </button>
+        <button class="btn btn-sm btn-danger rounded-pill px-3" id="logoutBtn">
+          <i class="fa-solid fa-power-off me-1"></i> Lock
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container-fluid px-lg-4 py-4">
+
+    <!-- Top KPI Row -->
+    <div class="row g-3 mb-4">
+      <div class="col-sm-6 col-xl-3">
+        <div class="admin-card p-3 p-lg-4">
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <span class="text-muted small fw-semibold text-uppercase">Total Leads</span>
+              <h2 class="fw-bold mb-0 mt-1" id="kpiTotal">0</h2>
+            </div>
+            <div class="stat-icon bg-primary bg-opacity-10 text-primary">
+              <i class="fa-solid fa-users"></i>
+            </div>
+          </div>
+          <div class="mt-3 small text-muted">
+            <span class="text-success fw-bold"><i class="fa-solid fa-bolt"></i> Live sync</span> across all pages
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="admin-card p-3 p-lg-4">
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <span class="text-muted small fw-semibold text-uppercase">New Enquiries</span>
+              <h2 class="fw-bold text-success mb-0 mt-1" id="kpiNew">0</h2>
+            </div>
+            <div class="stat-icon bg-success bg-opacity-10 text-success">
+              <i class="fa-solid fa-sparkles"></i>
+            </div>
+          </div>
+          <div class="mt-3 small text-muted">Awaiting initial WhatsApp contact</div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="admin-card p-3 p-lg-4">
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <span class="text-muted small fw-semibold text-uppercase">In Progress</span>
+              <h2 class="fw-bold text-warning mb-0 mt-1" id="kpiProgress">0</h2>
+            </div>
+            <div class="stat-icon bg-warning bg-opacity-10 text-warning">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+          </div>
+          <div class="mt-3 small text-muted">Itinerary / quotation sent</div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="admin-card p-3 p-lg-4">
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <span class="text-muted small fw-semibold text-uppercase">Confirmed / Booked</span>
+              <h2 class="fw-bold text-info mb-0 mt-1" id="kpiBooked">0</h2>
+            </div>
+            <div class="stat-icon bg-info bg-opacity-10 text-info">
+              <i class="fa-solid fa-crown"></i>
+            </div>
+          </div>
+          <div class="mt-3 small text-muted">Escapes finalized</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls & Filters Bar -->
+    <div class="admin-card p-3 p-lg-4 mb-4">
+      <div class="row g-3 align-items-center">
+        <div class="col-lg-4">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0 text-muted"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" id="searchInput" class="form-control border-start-0" placeholder="Search by Client, Phone, Destination, or Notes...">
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <select id="serviceFilter" class="form-select">
+            <option value="ALL">All Services</option>
+            <option value="Hotel">🏨 Luxury Stays &amp; Resorts</option>
+            <option value="Flight">✈️ Flight Concierge</option>
+            <option value="Package">🌴 Curated Packages</option>
+            <option value="Visa">🛂 Visa Assistance</option>
+            <option value="Forex">💱 Forex Cards</option>
+            <option value="Consultation">✉️ Direct Messages</option>
+          </select>
+        </div>
+        <div class="col-sm-6 col-lg-2">
+          <select id="statusFilter" class="form-select">
+            <option value="ALL">All Statuses</option>
+            <option value="New">🟢 New</option>
+            <option value="Contacted">🟡 Contacted</option>
+            <option value="In Progress">🔵 In Progress</option>
+            <option value="Booked">🟣 Booked</option>
+          </select>
+        </div>
+        <div class="col-lg-3 d-flex gap-2 justify-content-lg-end">
+          <button class="btn btn-outline-secondary rounded-pill px-3" id="refreshBtn" title="Sync & Reload">
+            <i class="fa-solid fa-rotate me-1"></i> Refresh
+          </button>
+          <button class="btn btn-outline-success rounded-pill px-3" id="exportBtn" title="Download Excel/CSV">
+            <i class="fa-solid fa-file-excel me-1"></i> Export CSV
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leads Table Card -->
+    <div class="admin-card overflow-hidden">
+      <div class="p-3 p-lg-4 border-bottom d-flex align-items-center justify-content-between">
+        <div>
+          <h5 class="fw-bold mb-0">Client Enquiries &amp; Leads</h5>
+          <span class="text-muted small">Real-time incoming enquiries from beyondskai.com</span>
+        </div>
+        <span class="badge bg-light text-dark border px-3 py-2 rounded-pill small" id="syncStatusBadge">
+          <i class="fa-solid fa-circle text-success me-1"></i> Database Connected
+        </span>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0" id="leadsTable">
+          <thead class="table-light text-uppercase small text-muted">
+            <tr>
+              <th scope="col" style="width: 140px;">Date &amp; Time</th>
+              <th scope="col">Service</th>
+              <th scope="col">Client Details</th>
+              <th scope="col">Destination / Route</th>
+              <th scope="col">Travel Date</th>
+              <th scope="col" style="max-width: 250px;">Requirements</th>
+              <th scope="col" style="width: 140px;">Status</th>
+              <th scope="col" class="text-end" style="width: 100px;">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="leadsTableBody">
+            <!-- Populated via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="text-center py-5 d-none">
+        <div class="p-4 bg-light rounded-circle d-inline-block text-muted fs-1 mb-3">
+          <i class="fa-solid fa-inbox"></i>
+        </div>
+        <h5 class="fw-bold text-dark mb-1">No enquiries found</h5>
+        <p class="text-muted small mb-3">Incoming client submissions from your website forms will appear here automatically.</p>
+        <button class="btn btn-primary rounded-pill btn-sm px-3" id="addDemoLeadBtn">
+          <i class="fa-solid fa-plus me-1"></i> Generate Test Enquiry
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Settings & Sync Modal -->
+  <div class="modal fade" id="settingsModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold">Admin Settings &amp; Cloud Sync</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-4">
+            <label class="form-label fw-bold small text-dark">Google Sheet Webhook URL (Live Sync)</label>
+            <div class="input-group mb-2">
+              <span class="input-group-text bg-light text-muted"><i class="fa-solid fa-link"></i></span>
+              <input type="url" id="sheetUrlInput" class="form-control" placeholder="https://script.google.com/macros/s/.../exec">
+            </div>
+            <div class="small text-muted">
+              Paste the Web App URL generated from your Google Sheet (via <code>google-apps-script.js</code>) to store all leads permanently in Google Sheets.
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label fw-bold small text-dark">Change Admin Passcode</label>
+            <div class="input-group mb-2">
+              <span class="input-group-text bg-light text-muted"><i class="fa-solid fa-key"></i></span>
+              <input type="text" id="newPinInput" class="form-control" placeholder="New PIN (e.g. skai2026)">
+            </div>
+          </div>
+
+          <div class="p-3 bg-light rounded-3 border">
+            <h6 class="fw-bold mb-1 small text-dark"><i class="fa-solid fa-database text-primary me-1"></i> Data Storage</h6>
+            <p class="small text-muted mb-2">All enquiries are instantly cached in your browser and mirrored to your connected Google Sheet.</p>
+            <button class="btn btn-outline-danger btn-sm rounded-pill" id="clearLeadsBtn">
+              <i class="fa-solid fa-trash me-1"></i> Clear Local Cache
+            </button>
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-secondary rounded-pill px-3" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary rounded-pill px-4" id="saveSettingsBtn">Save Settings</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Constants & Configuration
+    const PIN_KEY = 'beyondskai_admin_pin';
+    const SESSION_KEY = 'beyondskai_admin_auth';
+    const LEADS_KEY = 'beyondskai_leads';
+    const SHEET_URL_KEY = 'beyondskai_sheet_url';
+    const DEFAULT_PIN = 'skai2026';
+
+    // State
+    let leads = [];
+
+    // Auth Check
+    function checkAuth() {
+      const isAuth = sessionStorage.getItem(SESSION_KEY) === 'true';
+      const overlay = document.getElementById('authOverlay');
+      if (isAuth) {
+        overlay.classList.add('d-none');
+        initDashboard();
+      } else {
+        overlay.classList.remove('d-none');
+      }
+    }
+
+    // Handle Login
+    document.getElementById('authForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const enteredPin = document.getElementById('adminPinInput').value.trim();
+      const storedPin = localStorage.getItem(PIN_KEY) || DEFAULT_PIN;
+
+      if (enteredPin === storedPin) {
+        sessionStorage.setItem(SESSION_KEY, 'true');
+        document.getElementById('authError').classList.add('d-none');
+        document.getElementById('authOverlay').classList.add('d-none');
+        initDashboard();
+      } else {
+        document.getElementById('authError').classList.remove('d-none');
+      }
+    });
+
+    // Handle Logout
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      sessionStorage.removeItem(SESSION_KEY);
+      location.reload();
+    });
+
+    // Load Local Leads
+    function loadLocalLeads() {
+      try {
+        const stored = localStorage.getItem(LEADS_KEY);
+        leads = stored ? JSON.parse(stored) : [];
+      } catch (e) {
+        leads = [];
+      }
+    }
+
+    // Save Local Leads
+    function saveLocalLeads() {
+      localStorage.setItem(LEADS_KEY, JSON.stringify(leads));
+      renderDashboard();
+    }
+
+    // Sync from Google Sheet (if configured)
+    async function fetchGoogleSheetLeads() {
+      const sheetUrl = localStorage.getItem(SHEET_URL_KEY);
+      const badge = document.getElementById('syncStatusBadge');
+
+      if (!sheetUrl) {
+        badge.innerHTML = '<i class="fa-solid fa-circle text-warning me-1"></i> Local Storage Mode';
+        badge.className = 'badge bg-warning bg-opacity-10 text-dark border px-3 py-2 rounded-pill small';
+        return;
+      }
+
+      badge.innerHTML = '<i class="fa-solid fa-spinner fa-spin text-primary me-1"></i> Syncing with Google Sheet...';
+
+      try {
+        const res = await fetch(sheetUrl);
+        const json = await res.json();
+        if (json && json.status === 'success' && Array.isArray(json.data)) {
+          // Merge sheet data with local data, avoiding duplicates
+          const sheetData = json.data;
+          const map = new Map();
+          
+          // Add local first
+          leads.forEach(item => {
+            const key = item.id || (item.timestamp + '_' + item.phone);
+            map.set(key, item);
+          });
+
+          // Overwrite/Add from sheet
+          sheetData.forEach(item => {
+            const key = item.id || (item.timestamp + '_' + item.phone);
+            map.set(key, item);
+          });
+
+          leads = Array.from(map.values()).sort((a,b) => new Date(b.timestamp) - new Date(a.timestamp));
+          localStorage.setItem(LEADS_KEY, JSON.stringify(leads));
+
+          badge.innerHTML = '<i class="fa-solid fa-circle text-success me-1"></i> Google Sheet Synced';
+          badge.className = 'badge bg-success bg-opacity-10 text-success border px-3 py-2 rounded-pill small';
+        }
+      } catch (err) {
+        console.warn('Google Sheet fetch error:', err);
+        badge.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-secondary me-1"></i> Sheet Offline (Using Local)';
+      }
+      renderDashboard();
+    }
+
+    // Render Stats & Table
+    function renderDashboard() {
+      // 1. Update KPIs
+      const total = leads.length;
+      const newCount = leads.filter(l => (l.status || 'New').toLowerCase() === 'new').length;
+      const progressCount = leads.filter(l => (l.status || '').toLowerCase() === 'in progress' || (l.status || '').toLowerCase() === 'contacted').length;
+      const bookedCount = leads.filter(l => (l.status || '').toLowerCase() === 'booked').length;
+
+      document.getElementById('kpiTotal').textContent = total;
+      document.getElementById('kpiNew').textContent = newCount;
+      document.getElementById('kpiProgress').textContent = progressCount;
+      document.getElementById('kpiBooked').textContent = bookedCount;
+
+      // 2. Filters
+      const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+      const serviceFilter = document.getElementById('serviceFilter').value;
+      const statusFilter = document.getElementById('statusFilter').value;
+
+      const filtered = leads.filter(item => {
+        const matchesSearch = !searchTerm ||
+          (item.name && item.name.toLowerCase().includes(searchTerm)) ||
+          (item.phone && String(item.phone).includes(searchTerm)) ||
+          (item.destination && item.destination.toLowerCase().includes(searchTerm)) ||
+          (item.details && item.details.toLowerCase().includes(searchTerm)) ||
+          (item.service && item.service.toLowerCase().includes(searchTerm));
+
+        const matchesService = serviceFilter === 'ALL' ||
+          (item.service && item.service.toLowerCase().includes(serviceFilter.toLowerCase()));
+
+        const matchesStatus = statusFilter === 'ALL' ||
+          (item.status && item.status.toLowerCase() === statusFilter.toLowerCase());
+
+        return matchesSearch && matchesService && matchesStatus;
+      });
+
+      // 3. Render Table
+      const tbody = document.getElementById('leadsTableBody');
+      const emptyState = document.getElementById('emptyState');
+      tbody.innerHTML = '';
+
+      if (filtered.length === 0) {
+        emptyState.classList.remove('d-none');
+        return;
+      } else {
+        emptyState.classList.add('d-none');
+      }
+
+      filtered.forEach((lead, index) => {
+        const tr = document.createElement('tr');
+
+        // Service badge styling
+        let badgeClass = 'bg-secondary';
+        let badgeIcon = 'fa-tag';
+        const srv = (lead.service || '').toLowerCase();
+        if (srv.includes('hotel') || srv.includes('stay')) { badgeClass = 'bg-primary'; badgeIcon = 'fa-hotel'; }
+        else if (srv.includes('flight')) { badgeClass = 'bg-info text-dark'; badgeIcon = 'fa-plane-departure'; }
+        else if (srv.includes('package')) { badgeClass = 'bg-warning text-dark'; badgeIcon = 'fa-umbrella-beach'; }
+        else if (srv.includes('visa')) { badgeClass = 'bg-dark'; badgeIcon = 'fa-passport'; }
+        else if (srv.includes('forex')) { badgeClass = 'bg-success'; badgeIcon = 'fa-money-bill-wave'; }
+
+        // WhatsApp direct link
+        const cleanPhone = String(lead.phone || '').replace(/[^0-9]/g, '');
+        const waPhone = cleanPhone.length === 10 ? ('91' + cleanPhone) : cleanPhone;
+        const waText = encodeURIComponent(`Hello ${lead.name || 'Valued Guest'}, greetings from Beyond Skai! Regarding your ${lead.service || 'travel'} enquiry for ${lead.destination || 'your trip'}: how can we assist you today?`);
+        const waUrl = `https://wa.me/${waPhone}?text=${waText}`;
+
+        // Status badge
+        const status = lead.status || 'New';
+        let statusColor = 'success';
+        if (status === 'Contacted') statusColor = 'warning';
+        if (status === 'In Progress') statusColor = 'info';
+        if (status === 'Booked') statusColor = 'purple';
+
+        tr.innerHTML = `
+          <td>
+            <div class="fw-semibold text-dark small">${lead.timestamp || '-'}</div>
+            <span class="badge bg-light text-muted border">${lead.id || ('BS-' + index)}</span>
+          </td>
+          <td>
+            <span class="badge ${badgeClass} badge-service">
+              <i class="fa-solid ${badgeIcon} me-1"></i> ${lead.service || 'General'}
+            </span>
+          </td>
+          <td>
+            <div class="fw-bold text-dark">${lead.name || 'Guest'}</div>
+            <div class="d-flex align-items-center gap-2 mt-1">
+              <span class="small text-muted"><i class="fa-solid fa-phone me-1"></i> ${lead.phone || '-'}</span>
+              ${cleanPhone ? `
+                <a href="${waUrl}" target="_blank" class="btn btn-sm btn-whatsapp rounded-pill px-2 py-0 fs-7" title="Message on WhatsApp">
+                  <i class="fa-brands fa-whatsapp me-1"></i> Chat
+                </a>
+              ` : ''}
+            </div>
+          </td>
+          <td>
+            <span class="fw-semibold text-dark">${lead.destination || '-'}</span>
+          </td>
+          <td>
+            <span class="small text-muted"><i class="fa-regular fa-calendar me-1"></i> ${lead.date || '-'}</span>
+          </td>
+          <td style="max-width: 250px;">
+            <div class="text-truncate small text-secondary" title="${lead.details || ''}">
+              ${lead.details || 'No additional notes'}
+            </div>
+          </td>
+          <td>
+            <select class="form-select form-select-sm rounded-pill fw-semibold border-${statusColor}" onchange="updateLeadStatus('${lead.id}', this.value)">
+              <option value="New" ${status === 'New' ? 'selected' : ''}>🟢 New</option>
+              <option value="Contacted" ${status === 'Contacted' ? 'selected' : ''}>🟡 Contacted</option>
+              <option value="In Progress" ${status === 'In Progress' ? 'selected' : ''}>🔵 In Progress</option>
+              <option value="Booked" ${status === 'Booked' ? 'selected' : ''}>🟣 Booked</option>
+            </select>
+          </td>
+          <td class="text-end">
+            <button class="btn btn-sm btn-outline-danger rounded-circle p-1" onclick="deleteLead('${lead.id}')" title="Delete Lead">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Update Status
+    window.updateLeadStatus = function(id, newStatus) {
+      const item = leads.find(l => l.id === id);
+      if (item) {
+        item.status = newStatus;
+        saveLocalLeads();
+      }
+    };
+
+    // Delete Lead
+    window.deleteLead = function(id) {
+      if (confirm('Are you sure you want to delete this enquiry?')) {
+        leads = leads.filter(l => l.id !== id);
+        saveLocalLeads();
+      }
+    };
+
+    // Generate Demo Lead
+    document.getElementById('addDemoLeadBtn').addEventListener('click', () => {
+      const demoServices = [
+        { s: 'Hotel & Resort Inquiry', dest: 'Santorini, Greece', d: 'Check-in: 2026-11-10 | 5-Star Luxury Resort | 2 Adults' },
+        { s: 'Flight Booking Concierge', dest: 'Kolkata ➔ Zurich', d: 'Business Class | Return: 2026-12-05' },
+        { s: 'Curated Package: Bali Villa', dest: 'Bali, Indonesia', d: 'Private Pool Villa | 5 Nights / 6 Days' }
+      ];
+      const pick = demoServices[Math.floor(Math.random() * demoServices.length)];
+      const newLead = {
+        id: 'BS-' + Date.now().toString(36).toUpperCase(),
+        timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', dateStyle: 'medium', timeStyle: 'short' }),
+        service: pick.s,
+        name: 'Sample Guest',
+        phone: '9830541502',
+        destination: pick.dest,
+        date: '2026-11-10',
+        details: pick.d,
+        page: 'hotels.html',
+        status: 'New'
+      };
+      leads.unshift(newLead);
+      saveLocalLeads();
+    });
+
+    // Search and Filters Listeners
+    document.getElementById('searchInput').addEventListener('input', renderDashboard);
+    document.getElementById('serviceFilter').addEventListener('change', renderDashboard);
+    document.getElementById('statusFilter').addEventListener('change', renderDashboard);
+    document.getElementById('refreshBtn').addEventListener('click', fetchGoogleSheetLeads);
+
+    // Export CSV
+    document.getElementById('exportBtn').addEventListener('click', () => {
+      if (leads.length === 0) {
+        alert('No enquiries to export.');
+        return;
+      }
+      const headers = ['Lead ID', 'Timestamp', 'Service', 'Name', 'Phone', 'Destination', 'Date', 'Details', 'Status'];
+      const csvRows = [headers.join(',')];
+
+      leads.forEach(l => {
+        const row = [
+          `"${l.id || ''}"`,
+          `"${l.timestamp || ''}"`,
+          `"${l.service || ''}"`,
+          `"${l.name || ''}"`,
+          `"${l.phone || ''}"`,
+          `"${l.destination || ''}"`,
+          `"${l.date || ''}"`,
+          `"${(l.details || '').replace(/"/g, '""')}"`,
+          `"${l.status || 'New'}"`
+        ];
+        csvRows.push(row.join(','));
+      });
+
+      const blob = new Blob([csvRows.join('\n')], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `BeyondSkai_Leads_${new Date().toISOString().split('T')[0]}.csv`;
+      a.click();
+    });
+
+    // Settings Modal
+    const sheetUrlInput = document.getElementById('sheetUrlInput');
+    const newPinInput = document.getElementById('newPinInput');
+
+    document.getElementById('settingsModal').addEventListener('show.bs.modal', () => {
+      sheetUrlInput.value = localStorage.getItem(SHEET_URL_KEY) || '';
+      newPinInput.value = localStorage.getItem(PIN_KEY) || DEFAULT_PIN;
+    });
+
+    document.getElementById('saveSettingsBtn').addEventListener('click', () => {
+      const url = sheetUrlInput.value.trim();
+      const pin = newPinInput.value.trim();
+
+      if (url) localStorage.setItem(SHEET_URL_KEY, url);
+      else localStorage.removeItem(SHEET_URL_KEY);
+
+      if (pin) localStorage.setItem(PIN_KEY, pin);
+
+      bootstrap.Modal.getInstance(document.getElementById('settingsModal')).hide();
+      fetchGoogleSheetLeads();
+      alert('Settings saved successfully!');
+    });
+
+    document.getElementById('clearLeadsBtn').addEventListener('click', () => {
+      if (confirm('Clear all local cached enquiries?')) {
+        leads = [];
+        saveLocalLeads();
+      }
+    });
+
+    // Initialize Dashboard
+    function initDashboard() {
+      loadLocalLeads();
+      renderDashboard();
+      fetchGoogleSheetLeads();
+    }
+
+    // Auto-run on load
+    document.addEventListener('DOMContentLoaded', checkAuth);
+  </script>
+</body>
+</html>

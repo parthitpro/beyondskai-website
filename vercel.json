@@ -9,6 +9,7 @@
     { "source": "/hotels", "destination": "/hotels.html" },
     { "source": "/visa", "destination": "/visa.html" },
     { "source": "/forex", "destination": "/forex.html" },
-    { "source": "/contact", "destination": "/contact.html" }
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/admin", "destination": "/admin.html" }
   ]
 }
